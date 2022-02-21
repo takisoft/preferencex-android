@@ -2,7 +2,7 @@
 
 This library is meant to fix some of the problems found in the official AndroidX preference library. Also, there are [new preference types](#extra-types) available, such as `RingtonePreference`, `DatePickerPreference`, and `TimePickerPreference`.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.takisoft.preferencex/preferencex.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.takisoft.preferencex%22%20AND%20a:%22preferencex%22)
+[![Maven Central](https://img.shields.io/maven-central/v/com.takisoft.preferencex/preferencex.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.takisoft.preferencex%22)
 
 ### Donation
 
