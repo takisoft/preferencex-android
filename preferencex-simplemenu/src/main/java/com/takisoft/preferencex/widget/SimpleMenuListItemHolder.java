@@ -15,6 +15,7 @@ public class SimpleMenuListItemHolder extends RecyclerView.ViewHolder implements
     public CheckedTextView mCheckedTextView;
 
     private SimpleMenuPopupWindow mWindow;
+    private int mPosition;
 
     public SimpleMenuListItemHolder(View itemView) {
         super(itemView);
@@ -25,6 +26,7 @@ public class SimpleMenuListItemHolder extends RecyclerView.ViewHolder implements
 
     public void bind(SimpleMenuPopupWindow window, int position) {
         mWindow = window;
+        mPosition = position;
         mCheckedTextView.setText(mWindow.getEntries()[position]);
         mCheckedTextView.setChecked(position == mWindow.getSelectedIndex());
         mCheckedTextView.setMaxLines(mWindow.getMode() == DIALOG ? Integer.MAX_VALUE : 1);
@@ -37,7 +39,7 @@ public class SimpleMenuListItemHolder extends RecyclerView.ViewHolder implements
     @Override
     public void onClick(View view) {
         if (mWindow.getOnItemClickListener() != null) {
-            mWindow.getOnItemClickListener().onClick(getAdapterPosition());
+            mWindow.getOnItemClickListener().onClick(mPosition);
         }
 
         if (mWindow.isShowing()) {
